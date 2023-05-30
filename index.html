@@ -1,39 +1,62 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Some radio feeds">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music</title>
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .player {
+            text-align: center;
+            margin: 10px;
+        }
+
+        @media (max-width: 850px) {
+            .content {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
-<style>
-    .center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
+
 <body>
-    <div id="title" class="center">
+    <header id="header" class="center">
         <h1>TunzTunz</h1>
-    </div>
-    <div id="content" class="center">
-        <p>Trance A</p>
-        <div class="player">
-            <video src="https://trance.out.airtime.pro:8000/trance_a" autoplay controls></video>
+    </header>
+    <div class="content">
+        <div id="trance_a" class="player">
+            <h3>Trance</h3>
+            <video controls="controls" preload="metadata" poster="/img/trance1.png" width="256" height="256">
+                <source src="https://trance.out.airtime.pro:8000/trance_a">
+            </video>
         </div>
-    </div>
-    <div id="content" class="center">
-        <p>Trance B</p>
-        <div class="player">
-            <video src="https://trance.out.airtime.pro:8000/trance_b" autoplay controls></video>
+        <div id="trance_b" class="player">
+            <h3>Trance b</h3>
+            <video controls="controls" preload="metadata" poster="/img/trance2.png" width="256" height="256">
+                <source src="https://trance.out.airtime.pro:8000/trance_b">
+            </video>
         </div>
-    </div>
-    <div id="content" class="center">
-        <p>Chill</p>
-        <div class="player">
-            <video src="https://chill.out.airtime.pro/chill_c" autoplay controls></video>
+        <div id="chill" class="player">
+            <h3 class="title">Chill</h3>
+            <video controls="controls" preload="metadata" poster="/img/trance3.png" width="256" height="256">
+                <source src="https://chill.out.airtime.pro/chill_c">
+            </video>
         </div>
     </div>
 </body>
+
 </html>
 <!--https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-->
