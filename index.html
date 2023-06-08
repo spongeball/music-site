@@ -37,13 +37,17 @@
         <h1>TunzTunz</h1>
     </header>
     <div class="content">
-        <div id="trance_a" class="player">
+        <div id="trance" class="player">
             <h3>Trance</h3>
-            <video controls="controls" preload="metadata" poster="/img/trance1.png" width="256" height="256">
-                <source src="https://trance.out.airtime.pro:8000/trance_a">
-            </video>
+            <audio id="atrance1">
+                <source src="https://trance.out.airtime.pro:8000/trance_a" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+            <img src="/img/trance1.png" width="256" height="256" alt="trance"
+                onclick="document.getElementById('atrance1').play()"
+                ondblclick="document.getElementById('atrance1').pause()">
         </div>
-        <div id="trance_b" class="player">
+        <div id="trance_b" class="player" hidden>
             <h3>Trance b</h3>
             <video controls="controls" preload="metadata" poster="/img/trance2.png" width="256" height="256">
                 <source src="https://trance.out.airtime.pro:8000/trance_b">
@@ -51,12 +55,15 @@
         </div>
         <div id="chill" class="player">
             <h3 class="title">Chill</h3>
-            <video controls="controls" preload="metadata" poster="/img/trance3.png" width="256" height="256">
-                <source src="https://chill.out.airtime.pro/chill_c">
-            </video>
+            <audio id="achill">
+                <source src="https://chill.out.airtime.pro:8000/chill_c" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+            <img src="/img/trance3.png" width="256" height="256" alt="trance"
+                onclick="document.getElementById('achill').play()"
+                ondblclick="document.getElementById('achill').pause()">
         </div>
     </div>
 </body>
 
 </html>
-<!--https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-->
