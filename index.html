@@ -5,12 +5,20 @@
     <meta charset="UTF-8">
     <meta name="description" content="Some radio feeds">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json"/>
+    <link rel="apple-touch-icon" href="img/ios-logo.jpeg">
+    <link rel="apple-touch-startup-image" href="/img/ios-logo.jpeg">
     <title>Music</title>
     <style>
         .center {
             display: flex;
             justify-content: center;
+        }
+
+        .header {
+            text-align: center;
         }
 
         .content {
@@ -24,6 +32,11 @@
             margin: 10px;
         }
 
+        .image-small {
+            width: 256px;
+            height: 256px;
+        }
+
         @media (max-width: 850px) {
             .content {
                 flex-direction: column;
@@ -33,33 +46,35 @@
 </head>
 
 <body>
-    <header id="header" class="center">
+    <div class="header">
         <h1>TunzTunz</h1>
-    </header>
+        <p>Click to tunz some tunz tunz</p>
+    </div>
+
     <div class="content">
         <div id="trance" class="player">
             <h3>Trance</h3>
-            <audio id="atrance1">
+            <audio id="atrance1" preload="none">
                 <source src="https://trance.out.airtime.pro:8000/trance_a" type="audio/mpeg">
                 Your browser does not support the audio tag.
             </audio>
-            <img src="/img/trance1.png" width="256" height="256" alt="trance"
+            <img src="/img/trance1.png" class="image-small" alt="toomuchmushrooms"
                 onclick="document.getElementById('atrance1').play()"
                 ondblclick="document.getElementById('atrance1').pause()">
         </div>
         <div id="trance_b" class="player" hidden>
             <h3>Trance b</h3>
-            <video controls="controls" preload="metadata" poster="/img/trance2.png" width="256" height="256">
+            <video controls="controls" preload="none" poster="/img/trance2.png" width="256" height="256">
                 <source src="https://trance.out.airtime.pro:8000/trance_b">
             </video>
         </div>
         <div id="chill" class="player">
-            <h3 class="title">Chill</h3>
-            <audio id="achill">
+            <h3 class="title">Nel chilling</h3>
+            <audio id="achill" preload="none">
                 <source src="https://chill.out.airtime.pro:8000/chill_c" type="audio/mpeg">
                 Your browser does not support the audio tag.
             </audio>
-            <img src="/img/trance3.png" width="256" height="256" alt="trance"
+            <img src="/img/trance3.png" width="256" height="256" alt="toomuchchilling"
                 onclick="document.getElementById('achill').play()"
                 ondblclick="document.getElementById('achill').pause()">
         </div>
