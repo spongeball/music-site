@@ -1,5 +1,1 @@
-# TunzTunz
-
-## PWA
-
-- [] Remove title
+Simple PWA application to listen to airtime.pro music feed.
